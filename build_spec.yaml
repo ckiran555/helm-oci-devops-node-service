@@ -75,7 +75,7 @@ steps:
     name: "Build container image"
     command: |
       cd ${OCI_WORKSPACE_DIR}/node_express
-      docker build --pull --rm -t kchedull/oci_webapp_arm_test:latest .
+      docker build --pull --rm -t kchedull/nodeservice1 .
 
   - type: Command
     timeoutInSeconds: 1200
@@ -97,4 +97,4 @@ outputArtifacts:
     type: DOCKER_IMAGE
     # this location tag doesn't effect the tag used to deliver the container image
     # to the Container Registry
-    location: kchedull/oci_webapp_arm_test:latest
+    location: kchedull/nodeservice1:latest
